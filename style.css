@@ -629,3 +629,11 @@ section {
   
 
 
+#source p {
+    margin: 20px 0; /* 20px en haut et en bas, 0 à gauche et à droite */
+}
+
+#source {
+    box-sizing: border-box;
+    padding: 20px;
+}
