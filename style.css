@@ -618,6 +618,14 @@ section {
     background: rgba(200, 200, 200, 0.9) !important; /* Gris clair au survol */
 }
 
-/* --------------------------------- select et radio de la section matrice */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* Couleur de fond légère */
+    color: #333;             /* Couleur du texte */
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 40px;        /* Espacement par rapport au contenu précédent */
+  }
+  
 
 
