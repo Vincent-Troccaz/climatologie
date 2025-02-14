@@ -1,0 +1,623 @@
+/* style.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('images/image_fond.jpg'); /* Remplacez par le chemin ou l'URL de votre image */
+    background-size: cover;      /* L'image couvre tout le fond */
+    background-position: center; /* L'image est centrée */
+    background-repeat: no-repeat;/* Pas de répétition */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background-attachment: fixed;
+    border-bottom: 1px solid transparent;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+header {
+    width: 1400px; /* Largeur fixe */
+    margin-top: 20px;
+    position: relative; /* Nécessaire pour positionner le logo en absolu  NOUVEAU*/
+    overflow: visible; 
+    display: flow-root; 
+    margin-bottom: 20px; /* Ajoute une marge de séparation */
+}
+
+#amu-logo {
+    position: absolute;
+    bottom: 10px;   /* Ajustez l'espacement vertical */
+    left: 20px;  /* Ajustez l'espacement horizontal */
+    width: 150px; /* Définissez la largeur souhaitée pour le logo */
+    z-index: 10; /* Le logo sera au-dessus du fond, mais en dessous du texte si besoin */
+}
+
+#amu-logo img {
+    width: 100%;
+    height: auto;
+}
+
+#lpsig-logo {
+    position: absolute;
+    bottom: 10px;   /* Ajustez l'espacement vertical */
+    right: 20px;  /* Ajustez l'espacement horizontal */
+    width: 150px; /* Définissez la largeur souhaitée pour le logo */
+    z-index: 10; /* Le logo sera au-dessus du fond, mais en dessous du texte si besoin */
+}
+
+#lpsig-logo img {
+    width: 100%;
+    height: auto;
+}
+
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    
+}
+
+header h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.title-bg {
+    position: relative;
+    width: 100%;
+    background: url('images/neige2.webp') no-repeat center;
+    background-size: cover; /* L'image couvre toute la zone du texte */
+    color: white; 
+    padding: 2rem 0; /* Ajoute de l'espace pour éviter que le texte touche les bords */
+    text-align: center; /* Centre le texte */
+    border-radius: 10px; /* Arrondi les bords */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    min-height: 350px;
+    box-sizing: border-box;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); Ajoute une ombre pour améliorer la lisibilité */
+}
+
+/* Calque noir semi-transparent */
+.title-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Noir à 50% d'opacité */
+    z-index: 1; /* S'assure que le calque est au-dessus de l'image */
+    border-radius: inherit;
+}
+
+/* Met le texte au premier plan */
+.title-bg h1, .title-bg h2 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    max-width: 90%; /* Empêche les titres de dépasser */
+    margin: 0 auto; /* Centre les titres */
+    text-align: center;
+    word-wrap: break-word; /* Coupe les mots trop longs si nécessaire */
+    text-transform: uppercase;
+    box-sizing: border-box; /* Inclut le padding et les bordures dans la taille totale */
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* ✅ Appliquer une largeur de 1400px avec border-radius aux sections principales */
+section {
+    width: 1400px; /* Largeur fixe */
+    background-color: white; /* Fond blanc pour le contraste */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 0; /* Espacement interne */
+    margin-bottom: 20px; /* Ajoute une marge de séparation */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    overflow: visible;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* ✅ Section présentation */
+#presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ✅ Texte de présentation */
+.presentation-text {
+    width: 60%;
+    margin: 20px;
+    text-align: justify;
+}
+
+.presentation-text h3 {
+    margin-top: 5px;
+    font-size: 30px; 
+}
+
+.presentation-text p span {
+    font-weight: bold;
+}
+
+/* ✅ Image de présentation */
+.presentation-image {
+    width: 50%;
+    text-align: left;
+    margin: 30px 50px;
+}
+
+/* ✅ Image responsive */
+.presentation-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* --------------------------------- Graphs --------------------------------------------------- */
+
+/* ✅ Graphiques */
+.graphs {
+    text-align: center;
+}
+
+.graphs p {
+    text-align: justify;
+    margin-inline: 20px;
+}
+
+/* --------------------------------- Matrice --------------------------------------------------- */
+
+#matrice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+#matrice p {
+    text-align: justify;
+    margin-inline: 20px;
+}
+
+.chart {
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+    margin-inline: 10px;
+}
+
+.chart-item {
+    text-align: center;
+    /* flex: 1 1 50%; */
+    min-width: 600px;
+}
+
+.chart-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.chart img {
+    height: auto;
+}
+
+.control-panel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 900px;
+}
+
+.control-panel label {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.control-panel select {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.control-panel input[type="radio"] {
+    margin-right: 5px;
+}
+  
+.massif-select,
+.parameter-radio {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.massif-select label {
+    white-space: nowrap;
+}
+
+/* Style des boutons radio */
+.parameter-radio input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #033d54;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style du bouton radio lorsqu'il est sélectionné */
+.parameter-radio input[type="radio"]:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #033d54;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ✅ Responsive */
+@media (max-width: 1400px) {
+    header, section, #map-container {
+        width: 95%; /* S'adapte aux petits écrans */
+    }
+    
+    #presentation {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .presentation-text {
+        width: 100%;
+    }
+    
+    .presentation-image {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+/* ------------------------------------------------------------ */
+
+/* ✅ Appliquer une largeur de 1400px avec border-radius aux sections principales */
+#map-container {
+    position: relative;
+}
+
+/* ✅ Carte responsive */
+#map {
+    width: 100%;
+    height: 95vh;
+    border-radius: 10px;
+}
+
+#map-title-container,
+#scenario-controls,
+#controls,
+#year-controls,
+#variable-controls,
+#legend {
+    position: absolute; /* déjà défini pour certains */
+    z-index: 1000; /* ou toute valeur supérieure à celle de #map */
+}
+
+/* ✅ Contrôles de la carte */
+#controls, #year-controls, #variable-controls, #scenario-controls {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Conteneur du titre et du logo */
+#map-title-container {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Aligner logo et titre verticalement */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    gap: 10px; /* Ajoute un espacement entre le logo et le titre */
+}
+
+/* Style du logo */
+#map-logo {
+    width: 150px; /* Ajustez la taille selon vos besoins */
+    height: auto;
+}
+
+/* Style du titre de la carte */
+#map-title {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+  
+#controls {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+#altitudeRange {
+    writing-mode: bt-lr; /* Curseur vertical */
+    appearance: slider-vertical; /* Forcer l'affichage vertical */
+    height: 200px;
+    width: 10px;
+    margin-top: 10px;
+}
+  
+#altitudeLabel {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Curseur d'année en bas */
+#year-controls {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  
+#yearRange {
+    width: 300px;
+}
+  
+#playPause {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
+
+/* ------------------------------ Style des conteneurs des boutons radio -------------------------*/
+#variable-controls {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#scenario-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Style des boutons radio et labels */
+#variable-controls label, #scenario-controls label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    gap: 8px;
+}
+
+/* Style des boutons radio */
+#variable-controls input[type="radio"], #scenario-controls input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #033d54;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style du bouton radio lorsqu'il est sélectionné */
+#variable-controls input[type="radio"]:checked::before,
+#scenario-controls input[type="radio"]:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #033d54;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* -------------------------------- Style de la légende ---------------------------*/
+.legend-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    visibility: hidden; /* La légende est cachée au départ */
+}
+  
+.legend-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+  
+.legend-scale {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+  
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    justify-content: flex-start;
+}
+  
+.legend-color {
+    width: 20px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid #000;
+}
+
+/* --------------------- Style personnalisé pour l'attribution ------------------------*/
+.leaflet-control-attribution {
+    background: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    font-size: 12px;  /* Texte plus petit */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.leaflet-control-attribution a {
+    color: #0078A8; /* Couleur des liens */
+    text-decoration: none;
+}
+
+.leaflet-control-attribution a:hover {
+    text-decoration: underline;
+}
+
+/* Icône du petit drapeau dans l'attribution */
+.leaflet-flag {
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%234C7BE1" d="M0 0h12v4H0z"></path><path fill="%23FFD500" d="M0 4h12v3H0z"></path><path fill="%23E0BC00" d="M0 7h12v1H0z"></path></svg>');
+    background-size: contain;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+
+/* ------------------------- Zoom ------------------------------- */
+/* Appliquer un background aux boutons de zoom */
+.leaflet-control-zoom {
+    background: rgba(0, 0, 0, 0.5) !important; /* Fond semi-transparent noir */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 5px; /* Ajout d'un léger padding */
+}
+
+/* Styliser les boutons + et - */
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    background: rgba(0, 0, 0, 0.0) !important; /* Fond semi-transparent noir */
+    color: white !important; /* Couleur du texte */
+    border: none !important; /* Suppression de la bordure */
+    width: 30px !important; /* Ajustement de la largeur */
+    height: 30px !important; /* Ajustement de la hauteur */
+    font-size: 18px !important; /* Taille du texte */
+    font-weight: bold !important; /* Texte en gras */
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !;
+    border-radius: 4px !important; /* Coins arrondis */
+    transition: background 0.3s ease !important; /* Animation fluide */
+}
+
+/* Effet au survol */
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+    background: rgba(200, 200, 200, 0.9) !important; /* Gris clair au survol */
+}
+
+/* --------------------------------- select et radio de la section matrice */
+
+

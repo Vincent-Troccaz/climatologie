@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Carte JO 2030</title>
+</head>
+<body>
+    <header>
+        <div id="amu-logo">
+            <img src="logo/amu_white.png" alt="Logo">
+        </div>
+
+        <div id="lpsig-logo">
+            <img src="logo/lp_sig.png" alt="Logo">
+        </div>
+
+        <div class="title-bg">
+            <h1>Prévisions d'enneigement</h1>
+            <h1>dans les Alpes du Nord</h1>
+            <h2>Pour les JO de 2030 puis jusqu'en 2100</h2>
+        </div>
+    </header>
+
+    <section id="presentation">
+        <div class="presentation-text">
+            <h3>Contexte de l'étude</h3>
+            <p>
+                Cette étude, qui s'appuie sur des données de référence (depuis 1950) et du scénario RCP8.5 (jusqu'à 2100), téléchargées 
+                sur la plateforme <a href="https://www.drias-climat.fr/">DRIAS</a>, 
+                offre une représentation graphique de l'évolution de l'enneigement et des températures sur 
+                neuf massifs des Alpes du Nord.
+            </p>
+            <p>
+                Le scénario choisi <a href="https://www.drias-climat.fr/accompagnement/sections/175">RCP8.5</a> 
+                est pessimiste, cependant, il reflète malheureusement la tendance actuelle de l'évolution du climat. 
+            </p>
+            <p id="subject">
+                L'interrogation qui a conduit à cette étude est la suivante : Dans le cadre des JO de 2030, <span>quel serait le degré d'enneigement 
+                dans les Massifs des Alpes du Nord en fonction de l'altitude</span> ? 
+                À partir de quelle hauteur serons-nous en mesure de produire de la neige artificielle ?
+            </p>
+        </div>
+        <div class="presentation-image">
+            <img src="images/RCP.png" alt="All forcing agents CO2 equivalent concentration.svg" height="592" width="500">
+        </div>
+    </section>
+
+    <section class="graphs">
+        <h2>Analyse de l'indice SNDAV - Épaisseur de neige moyenne (mm) </h2>
+        <p>
+            Dans cette section, l'indice SNDAV, représentant l'épaisseur moyenne de neige sur une année, 
+            fait l'objet d'une analyse. Cette valeur a été calculée en moyenne sur une période 
+            de dix ans. À gauche, se présentent les données de référence, dont la date clé est celle 
+            des Jeux Olympiques d'Albertville, tandis qu'à droite, se trouve une projection fondée sur le 
+            scénario RCP8.5, avec pour repère la date des Jeux Olympiques de 2030.
+        </p>
+        <p>
+            Cette approche offre une perspective d'ensemble sur la tendance de l'enneigement par massif, 
+            mais elle doit être nuancée, car elle ne prend pas en considération l'altitude. 
+            À cet égard, une analyse plus approfondie sous forme de matrice est présentée ci-dessous sur cette page.
+        </p>
+        <div class="chart">
+            <div class="chart-item">
+                <h3>Données de référence</h3>
+                <img src="export/Graphique_reference/epaisseur_moyen_reference.png" alt="Graphique de l'enneigement">
+            </div>
+            <div class="chart-item">
+                <h3>Scénario RCP8.5</h3>
+                <img src="export/Graphique_RCP/epaisseur_moyen_RCP.png" alt="Graphique de l'enneigement">
+            </div>
+        </div>
+    </section>
+
+    <section class="graphs">
+        <h2>Analyse de l'indice TAV - Température moyenne journalière (°c) </h2>
+        <p>
+            Dans cette section, l'indice TAV, qui représente la température moyenne journalière, 
+            est soumis à une analyse. Cette valeur a par la suite été calculée en moyenne sur une 
+            période de dix ans. À gauche, se présentent les données de référence, dont la date clé est 
+            celle des Jeux Olympiques d'Albertville, tandis qu'à droite, se trouve une projection fondée 
+            sur le scénario RCP8.5, avec pour repère la date des Jeux Olympiques de 2030.
+        </p>
+        <p>
+            Il est possible d'observer, en fonction des massifs, une augmentation prévisionnelle de la 
+            température allant de 2,5 à 3 °C entre aujourd'hui et l'année 2100.
+        </p>
+        <div class="chart">
+            <div class="chart-item">
+                <h3>Données de référence</h3>
+                <img src="export/Graphique_reference/temperature_moyenne_reference.png" alt="Graphique des températures">
+            </div>
+            <div class="chart-item">
+                <h3>Scénario RCP8.5</h3>
+                <img src="export/Graphique_RCP/temperature_moyenne_RCP.png" alt="Graphique des températures">
+            </div>
+        </div>
+    </section>
+
+    <section class="graphs">
+        <h2>Analyse de l'indice TNFD - Nombre de jours de gel (jour(s)) </h2>
+        <p>
+            Dans cette section, l'indice TNFD, représentant le nombre de jours de gel, 
+            fait l'objet d'une analyse approfondie. Cette valeur a été calculée en moyenne sur une période de dix ans. 
+            À gauche, se présentent les données de référence, avec pour date clé les Jeux Olympiques d'Albertville, 
+            tandis qu'à droite, se trouve une projection fondée sur le scénario RCP8.5, marquée par la date des Jeux 
+            Olympiques de 2030.
+        </p>
+        <p>
+            Il est possible d'observer en prévision, une réduction significative du nombre de jours de gel. 
+            Cela aura des répercussions sur la production de neige artificielle à partir d'une altitude déterminée.
+        </p>
+        <div class="chart">
+            <div class="chart-item">
+                <h3>Données de référence</h3>
+                <img src="export/Graphique_reference/Nombre_jour_moyen_reference.png" alt="Nombre de jour de gel">
+            </div>
+            <div class="chart-item">
+                <h3>Scénario RCP8.5</h3>
+                <img src="export/Graphique_RCP/nombre_moyen_givre_RCP.png" alt="Nombre de jour de gel">
+            </div>
+        </div>
+    </section>
+
+    <section id="matrice">
+        <h2>Matrice des températures hivernales moyennées sur 10 ans par tranche d'altitude de 300m</h2>
+        <p>Dans cette section, il vous est possible de sélectionner un massif spécifique et d'opter pour 
+            l'analyse des températures ou celle du niveau d'enneigement. Les valeurs sont calculées en moyenne 
+            sur une période de dix ans. À gauche, se présente la matrice des données de référence, tandis qu'à 
+            droite se trouve la matrice correspondant au scénario RCP8.5, répartie par intervalles d'altitude 
+            de 300 mètres sur une période déterminée.  
+        </p>
+        
+                    <!-- Menu déroulant pour choisir le massif -->
+        <div class="control-panel">
+            <div class="massif-select">
+                <label for="libelleSelect">Selectionnez un massif :</label>
+                <select id="libelleSelect">
+                    <option value="">Sélectionnez un massif</option>
+                </select>
+            </div>
+            
+            <!-- Boutons radio pour choisir entre Température et Enneigement -->
+            <div class="parameter-radio">
+                <label>
+                    <input type="radio" name="parameter" value="temperature" checked>
+                    Températures
+                </label>
+                <label>
+                    <input type="radio" name="parameter" value="enneigement">
+                    Enneigement
+                </label>
+            </div>
+        </div>
+        <div class="chart">
+            <div class="chart-item">
+                <h3>Données de référence</h3>
+                <img id="refImage" src="export/Matrice_Temperature_Ref/matrice_temp_station_ref_Haute_Maurienne.svg" alt="Nombre de jour de gel">
+            </div>
+            <div class="chart-item">
+                <h3>Scénario RCP8.5</h3>
+                <img id="rcpImage" src="export/Matrice_Temperature_RCP/matrice_temp_station_RCP_Haute_Maurienne.svg" alt="Nombre de jour de gel">
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Conteneur principal pour la carte et ses fonctionnalités -->
+    <section id="map-container">
+        <div id="map-title-container">
+            <!-- Logo IUT -->
+            <img id="map-logo" src="logo/logo_amu.png" alt="Logo">
+            <!-- Titre de la carte -->
+            <div id="map-title">Scénario RCP8.5 Enneigement et Températures </div>
+        </div>
+
+        <!-- Sélecteur de scénario -->
+        <div id="scenario-controls">
+            <label><input type="radio" name="scenario" value="REF" checked> Données Référence (1951-2005)</label>
+            <label><input type="radio" name="scenario" value="RCP"> Scénario RCP8.5 (2005-2100)</label>
+        </div>
+
+        <div id="controls">
+            <label for="altitudeRange" id="altitudeLabel">Altitude: <span id="altitudeValue">1200</span> m</label>
+            <input type="range" id="altitudeRange" min="1200" max="3300" step="300" value="1200" orient="vertical">
+        </div>
+        
+        <div id="map"></div>
+
+        <!-- Curseur d'année horizontal avec bouton Play/Pause -->
+        <div id="year-controls">
+            <button id="playPause">▶️</button>
+            <label for="yearRange">Année: <span id="yearValue">2010</span></label>
+            <input type="range" id="yearRange" min="2010" max="2100" step="2" value="2010">
+        </div>
+
+        <!-- Sélection de la variable à afficher -->
+        <div id="variable-controls">
+            <label><input type="radio" name="variable" value="TAV" checked> Température Moyenne (°C)</label>
+            <label><input type="radio" name="variable" value="SNDAV"> Enneigement (cm)</label>
+        </div>
+
+        <!-- Conteneur de la légende -->
+        <div id="legend" class="legend-container"></div>
+    </section>
+
+    <section id="source">
+        <h2>Matrice des températures hivernales moyennée sur 10 ans par tranche d'altitude de 300m</h2>
+        <p>Dans cette section il est analysé l'indice TNFD, qui correspond au nombre de jours de gel.
+            Cette valeur a ensuite été moyennée sur une période de 10 ans. A gauche, se trouve les données de référence 
+                avec comme date clef : les JO d'Albertville, puis à droite, une projection avec le scénario RCP8.5 
+                    avec comme marqueur la date des JO 2030.</p>
+
+    </section>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/shpjs@latest/dist/shp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+  
+
+  

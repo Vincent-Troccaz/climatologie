@@ -1,0 +1,11 @@
+jupyterlab
+pandas
+pillow
+pillow-heif
+piexif
+geopy
+requests
+geojson
+OSMPythonTools
+plotly
+folium
