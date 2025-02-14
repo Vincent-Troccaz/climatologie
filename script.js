@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Choix des dossiers et préfixes selon le bouton radio sélectionné
         if (selectedParameter === "enneigement") {
-            refPath = "export/Matrice_Cumul_Neige_ref/matrice_neige_station_ref_";
+            refPath = "export/Matrice_Cumul_Neige_Ref/matrice_neige_station_ref_";
             rcpPath = "export/Matrice_Cumul_Neige_RCP/matrice_neige_station_RCP_";
         } else {  // Par défaut, "temperature"
             refPath = "export/Matrice_Temperature_Ref/matrice_temp_station_ref_";
